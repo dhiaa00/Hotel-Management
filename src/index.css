@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  position: relative;
+  color: white;
+}
+.active::after {
+  top: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  background-color: #ff8c8c;
+  height: 100%;
+  animation: item-fill 0.2s ease-in;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+@keyframes item-fill {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
