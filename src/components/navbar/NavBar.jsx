@@ -33,7 +33,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className=" text-white bg-[#222032] navbar flex flex-col w-[20%] py-10 h-screen border-r-black border-solid sticky">
+    <div className=" text-white bg-[#222032] navbar flex flex-col w-[20%] py-10 h-screen border-r-black border-solid fixed">
       <div className="logo flex justify-center items-center gap-2 mb-10 ">
         <img src={logo} alt="" className=" w-10" />
       </div>

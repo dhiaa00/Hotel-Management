@@ -4,7 +4,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
   return (
-    <main className="flex">
+    <main className="grid justify-end">
       <NavBar />
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />

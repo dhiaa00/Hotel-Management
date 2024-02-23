@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #f0f3f8;
+}
 .active {
   position: relative;
   color: white;
