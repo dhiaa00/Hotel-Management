@@ -11,9 +11,10 @@
   left: 0;
   content: "";
   position: absolute;
-  background-color: #ff8c8c;
+  background-color: #3463de;
+  border-radius: 5px;
   height: 100%;
-  animation: item-fill 0.2s ease-in;
+  animation: item-fill 0.3s ease-in;
   animation-fill-mode: forwards;
   z-index: -1;
 }

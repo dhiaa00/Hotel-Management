@@ -33,13 +33,12 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="navbar flex flex-col w-1/6 py-10 h-screen border-r-2 border-r-black border-solid sticky">
+    <div className=" text-white bg-[#222032] navbar flex flex-col w-[20%] py-10 h-screen border-r-black border-solid sticky">
       <div className="logo flex justify-center items-center gap-2 mb-10 ">
         <img src={logo} alt="" className=" w-10" />
-        <h2>Money Tracker</h2>
       </div>
       <nav className="nav-links">
-        <ul className="flex flex-col">
+        <ul className="flex flex-col mx-5 gap-3">
           {navList.map((e) => (
             <NavBarLink
               linkNumber={linkNumber}
