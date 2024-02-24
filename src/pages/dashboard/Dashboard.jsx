@@ -1,9 +1,10 @@
 import React from "react";
-
 import IconCard from "../../components/dashboard-comps/IconCard";
 import Review from "../../components/dashboard-comps/Review";
+import { Bar } from "react-chartjs-2";
+import { Chart as ChartJS } from "chart.js/auto";
 
-const Dashboard = () => {
+const Dashboard = ({ reservationData }) => {
   return (
     <div className="dashboard pt-10 px-5 flex flex-1 flex-col w-[79vw] justify-between gap-[20px] ">
       <h1 className="text-[30px] pl-2 font-bold relative before:content-[''] before:absolute before:w-[3px] before:h-2/3  before:bg-mainColor before:top-[50%] before:left-[-5px] before:translate-y-[-50%]">
@@ -46,10 +47,13 @@ const Dashboard = () => {
             <Review userName={"Karim Djaber"} rating={4} />
           </div>
         </div>
-        <div className="stats">
+        <div className="stats flex flex-col bg-white w-[48%] p-5 rounded-[10px]">
           <h2 className="text-[18px] font-semibold relative before:content-[''] before:absolute before:w-[3px] pl-2 before:h-2/3  before:bg-mainColor before:top-[50%] before:left-[-5px] before:translate-y-[-50%]">
             Customer statistics
           </h2>
+          <div className="chart flex flex-1 items-center justify-center h-full">
+            <Bar data={reservationData} />
+          </div>
         </div>
       </div>
     </div>
