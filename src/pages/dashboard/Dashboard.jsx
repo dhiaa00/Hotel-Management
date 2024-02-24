@@ -5,12 +5,27 @@ import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 
 const Dashboard = ({ reservationData }) => {
+  const options = {
+    scales: {
+      yAxes: [
+        {
+          stacked: true, // Disable stacking
+        },
+      ],
+    },
+    elements: {
+      bar: {
+        borderRadius: 5, // Adjust this value to your desired rounding
+      },
+    },
+  };
+
   return (
     <div className="dashboard pt-10 px-5 flex flex-1 flex-col w-[79vw] justify-between gap-[20px] ">
       <h1 className="text-[30px] pl-2 font-bold relative before:content-[''] before:absolute before:w-[3px] before:h-2/3  before:bg-mainColor before:top-[50%] before:left-[-5px] before:translate-y-[-50%]">
         Dahsboard
       </h1>
-      <div className="info-cards flex justify-between">
+      <div className="info-cards flex max-[1000px]:flex-wrap max-[1000px]:justify-center max-[1000px]:gap-[20px] justify-between">
         <IconCard
           title={"Occupancy"}
           item1={78}
@@ -36,8 +51,8 @@ const Dashboard = ({ reservationData }) => {
           item3={"54%"}
         />
       </div>
-      <div className="reviews-stats flex justify-between ">
-        <div className="reviews h-[60vh] bg-white w-[48%] p-5 rounded-[10px] overflow-x-hidden">
+      <div className="reviews-stats flex justify-between max-[1000px]:flex-wrap max-[1000px]:justify-center max-[1000px]:gap-[20px] ">
+        <div className="reviews h-[60vh] bg-white w-[48%] max-[1000px]:w-full p-5 rounded-[10px] overflow-x-hidden">
           <h2 className="text-[18px] pl-2 font-semibold relative before:content-[''] before:absolute before:w-[3px] before:h-2/3  before:bg-mainColor before:top-[50%] before:left-[-5px] before:translate-y-[-50%] mb-3">
             Latest Review
           </h2>
@@ -47,12 +62,12 @@ const Dashboard = ({ reservationData }) => {
             <Review userName={"Karim Djaber"} rating={4} />
           </div>
         </div>
-        <div className="stats flex flex-col bg-white w-[48%] p-5 rounded-[10px]">
+        <div className="stats flex flex-col bg-white w-[48%] max-[1000px]:w-full p-5 rounded-[10px] ">
           <h2 className="text-[18px] font-semibold relative before:content-[''] before:absolute before:w-[3px] pl-2 before:h-2/3  before:bg-mainColor before:top-[50%] before:left-[-5px] before:translate-y-[-50%]">
             Customer statistics
           </h2>
           <div className="chart flex flex-1 items-center justify-center h-full">
-            <Bar data={reservationData} />
+            <Bar data={reservationData} options={options} />
           </div>
         </div>
       </div>

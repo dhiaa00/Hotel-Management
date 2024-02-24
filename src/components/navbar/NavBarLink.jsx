@@ -7,7 +7,7 @@ const NavBarLink = ({ linkNumber, setLinkNumber, title, icon, i }) => {
     <Link to={`/${title.toLowerCase()}`} className={style}>
       <div
         id={i}
-        className="linkElement flex items-center gap-5 py-3 px-4 w-full"
+        className="linkElement flex items-center gap-5 py-3 px-4 w-full max-[920px]:p-2 max-[920px]:gap-2"
         onClick={(e) => {
           setLinkNumber(e.target.id);
         }}>

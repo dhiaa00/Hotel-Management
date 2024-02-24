@@ -1,72 +1,52 @@
 export const reservationData = [
   {
     month: "January",
-    totalReservations: Math.floor(Math.random() * 200) + 50,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 200) + 50) * 0.75
-    ),
+    CanceledReservations: 54,
+    completedReservations: 246,
   },
   {
     month: "February",
-    totalReservations: Math.floor(Math.random() * 250) + 75,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 250) + 75) * 0.75
-    ),
+    CanceledReservations: 20,
+    completedReservations: 277,
   },
   {
     month: "March",
-    totalReservations: Math.floor(Math.random() * 180) + 30,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 180) + 30) * 0.75
-    ),
+    CanceledReservations: 25,
+    completedReservations: 142,
   },
   {
     month: "April",
-    totalReservations: Math.floor(Math.random() * 280) + 100,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 280) + 100) * 0.75
-    ),
+    CanceledReservations: 16,
+    completedReservations: 198,
   },
   {
     month: "May",
-    totalReservations: Math.floor(Math.random() * 220) + 60,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 220) + 60) * 0.75
-    ),
+    CanceledReservations: 14,
+    completedReservations: 154,
   },
   {
     month: "June",
-    totalReservations: Math.floor(Math.random() * 160) + 20,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 160) + 20) * 0.75
-    ),
+    CanceledReservations: 29,
+    completedReservations: 172,
   },
   {
     month: "July",
-    totalReservations: Math.floor(Math.random() * 300) + 150,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 300) + 150) * 0.75
-    ),
+    CanceledReservations: 42,
+    completedReservations: 224,
   },
   {
     month: "August",
-    totalReservations: Math.floor(Math.random() * 200) + 50,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 200) + 50) * 0.75
-    ),
+    CanceledReservations: 35,
+    completedReservations: 183,
   },
   {
     month: "September",
-    totalReservations: Math.floor(Math.random() * 240) + 80,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 240) + 80) * 0.75
-    ),
+    CanceledReservations: 13,
+    completedReservations: 237,
   },
   {
     month: "October",
-    totalReservations: Math.floor(Math.random() * 210) + 60,
-    completedReservations: Math.floor(
-      (Math.floor(Math.random() * 210) + 60) * 0.75
-    ),
+    CanceledReservations: 27,
+    completedReservations: 245,
   },
 ];

@@ -12,7 +12,7 @@ const NavBar = () => {
     },
     {
       id: 2,
-      title: "Activity",
+      title: "Booking",
       image: "bi-clock-history",
     },
     {
@@ -33,12 +33,12 @@ const NavBar = () => {
   ];
 
   return (
-    <div className=" text-white bg-[#222032] navbar flex flex-col w-[20%] py-10 h-screen border-r-black border-solid fixed">
-      <div className="logo flex justify-center items-center gap-2 mb-10 ">
+    <div className="navbar text-white bg-[#222032] flex flex-col w-[20%] py-10 h-screen border-r-black border-solid fixed max-[920px]:flex-row max-[920px]:top-0 max-[920px]:left-0 max-[920px]:w-[100%] max-[920px]:h-fit max-[920px]:sticky max-[920px]:p-0 max-[920px]:items-center max-[920px]:justify-center max-[920px]:z-[10000]">
+      <div className="logo flex justify-center items-center gap-2 mb-10 max-[920px]:m-0 max-[920px]:mr-5 ">
         <img src={logo} alt="" className=" w-10" />
       </div>
       <nav className="nav-links">
-        <ul className="flex flex-col mx-5 gap-3">
+        <ul className="flex flex-col max-[920px]:flex-row mx-5 gap-3 max-[920px]:m-0 max-[920px]:p-2">
           {navList.map((e) => (
             <NavBarLink
               linkNumber={linkNumber}

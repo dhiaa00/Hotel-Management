@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const IconCard = ({ title, item1, item2, item3 }) => {
   const color = title === "Security Risks" ? "bg-[#323042]" : "bg-mainColor";
   return (
-    <div className={`info-card w-[23%] text-white ${color} rounded-[10px] p-5`}>
+    <div
+      className={`info-card w-[24%] text-white ${color} rounded-[10px] p-5 max-[1000px]:w-[250px] `}>
       <h2 className="flex justify-start gap-3 text-[17px] pb-5">
         <FontAwesomeIcon icon="fa-solid fa-bed" />
         {title}
