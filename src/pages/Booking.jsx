@@ -1,4 +1,5 @@
 import React from "react";
+import BookingForm from "../components/form/BookingForm";
 
 const Booking = () => {
   return (
@@ -6,6 +7,7 @@ const Booking = () => {
       <h1 className="text-[30px] pl-2 font-bold relative before:content-[''] before:absolute before:w-[3px] before:h-2/3  before:bg-mainColor before:top-[50%] before:left-[-5px] before:translate-y-[-50%]">
         Booking
       </h1>
+      <BookingForm />
     </div>
   );
 };

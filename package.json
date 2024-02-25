@@ -10,9 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.1",
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap-icons": "^1.11.3",
     "chart.js": "^4.4.1",
     "react": "^18.2.0",

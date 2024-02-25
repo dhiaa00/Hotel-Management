@@ -27,25 +27,29 @@ const Dashboard = ({ reservationData }) => {
       </h1>
       <div className="info-cards flex max-[1000px]:flex-wrap max-[1000px]:justify-center max-[1000px]:gap-[20px] justify-between">
         <IconCard
+          icon={"bi-person"}
           title={"Occupancy"}
           item1={78}
           item2={"of 118 total"}
           item3={"67%"}
         />
         <IconCard
+          icon={"bi-shield-check"}
           title={"Security Risks"}
           item1={0}
           item2={"risks at the moment"}
           item3={"safe"}
         />
         <IconCard
+          icon={"bi-house-gear"}
           title={"Housekeeping"}
           item1={15}
           item2={"cleaned of 30"}
           item3={"50%"}
         />
         <IconCard
-          title={"Guests' Reauests"}
+          icon={"bi-pencil-square"}
+          title={"Guests' Requests"}
           item1={8}
           item2={"completed of 15"}
           item3={"54%"}

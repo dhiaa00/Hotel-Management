@@ -6,7 +6,6 @@ import { useState } from "react";
 import Booking from "./pages/Booking";
 
 function App() {
-  console.log(reservationData);
   const [formattedData, setFormattedData] = useState({
     labels: reservationData.map((e) => e.month),
     datasets: [
