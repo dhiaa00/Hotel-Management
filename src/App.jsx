@@ -23,6 +23,7 @@ function App() {
       },
     ],
   });
+
   return (
     <main className="grid justify-end max-[920px]:flex max-[920px]:flex-col max-[920px]:items-center">
       <NavBar />

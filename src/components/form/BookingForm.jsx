@@ -1,9 +1,11 @@
 import { doc } from "prettier";
-import React from "react";
+import React, { useState } from "react";
 
 const BookingForm = () => {
   const date = new Date();
-  const currentDate = date.toISOString().split("T")[0];
+  const [currentDate, setCurrentDate] = useState(
+    date.toISOString().split("T")[0]
+  );
   return (
     <form
       action=""
@@ -72,11 +74,23 @@ const BookingForm = () => {
         </div>
         <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start">
           <label htmlFor="from">From</label>
-          <input type="date" name="from" id="from" value={currentDate} />
+          <input
+            type="date"
+            name="from"
+            id="from"
+            value={currentDate}
+            onChange={(e) => setCurrentDate(e.target.value)}
+          />
         </div>
         <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start">
           <label htmlFor="to">To</label>
-          <input type="date" name="to" id="to" value={currentDate} />
+          <input
+            type="date"
+            name="to"
+            id="to"
+            value={currentDate}
+            onChange={(e) => setCurrentDate(e.target.value)}
+          />
         </div>
       </div>
       <div className="services w-full flex flex-col items-start gap-[10px] my-[20px]">

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import logo from "/images/logo.png";
 import NavBarLink from "./NavBarLink";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const NavBar = () => {
   const [linkNumber, setLinkNumber] = useState(1);
@@ -31,6 +33,28 @@ const NavBar = () => {
       image: "bi-question-circle",
     },
   ];
+  const navigationList = {
+    dashboard: 1,
+
+    booking: 2,
+
+    rooms: 3,
+
+    clients: 4,
+
+    "help%20center": 5,
+  };
+
+  const currentPage = useLocation().pathname.split("/")[1];
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (currentPage !== "") {
+      setLinkNumber(navigationList[currentPage]);
+    } else {
+      navigate("/dashboard");
+    }
+  }, [currentPage]);
 
   return (
     <div className="navbar text-white bg-[#222032] flex flex-col w-[20%] py-10 h-screen border-r-black border-solid fixed max-[920px]:flex-row max-[920px]:top-0 max-[920px]:left-0 max-[920px]:w-[100%] max-[920px]:h-fit max-[920px]:sticky max-[920px]:p-0 max-[920px]:items-center max-[920px]:justify-center max-[920px]:z-[10000]">
