@@ -41,7 +41,7 @@ const Dashboard = ({ reservationData }) => {
           item3={"safe"}
         />
         <IconCard
-          icon={"bi-house-gear"}
+          icon={"bi-brush"}
           title={"Housekeeping"}
           item1={15}
           item2={"cleaned of 30"}

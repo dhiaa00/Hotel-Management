@@ -13,17 +13,17 @@ const NavBar = () => {
     {
       id: 2,
       title: "Booking",
-      image: "bi-clock-history",
+      image: "bi-journal-bookmark",
     },
     {
       id: 3,
-      title: "Analytics",
-      image: "bi-bar-chart-fill",
+      title: "Rooms",
+      image: "bi-archive",
     },
     {
       id: 4,
-      title: "Transaction",
-      image: "bi-arrow-left-right",
+      title: "Clients",
+      image: "bi-person",
     },
     {
       id: 5,

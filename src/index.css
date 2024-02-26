@@ -34,3 +34,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 3px;
   cursor: pointer;
 }
+.booking-input input {
+  background-color: #f0f3f8;
+  border: 1px solid #222;
+}
