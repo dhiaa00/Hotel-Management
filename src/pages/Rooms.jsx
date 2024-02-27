@@ -3,7 +3,7 @@ import Room from "../components/rooms/Room";
 
 const Rooms = () => {
   return (
-    <div className="rooms pt-10 px-5 flex flex-1 flex-col w-[79vw]">
+    <div className="rooms pt-10 px-5 flex flex-1 flex-col w-[79vw] max-[920px]:w-[90%]">
       <div className="rooms-header flex justify-between items-center py-[10px]">
         <h1 className="text-[30px] pl-2 font-bold relative before:content-[''] before:absolute before:w-[3px] before:h-2/3  before:bg-mainColor before:top-[50%] before:left-[-5px] before:translate-y-[-50%]">
           Rooms
@@ -23,7 +23,22 @@ const Rooms = () => {
           </div>
         </div>
       </div>
-      <div className="rooms-wrapper flex flex-col bg-white px-[10px] py-[20px]">
+      <div className="rooms-wrapper flex flex-col bg-white space-y-2 px-[10px] py-[20px]">
+        <div className="titles flex justify-between px-[20px]">
+          <div className="empty w-[13px]"></div>
+          <div className="title font-bold text-[18px] text-center w-[34.5px]">
+            N°
+          </div>
+          <div className="title font-bold text-[18px] text-center w-[49.5px]">
+            Type
+          </div>
+          <div className="title font-bold text-[18px]">In Service</div>
+          <div className="title font-bold text-[18px]">Cleaned</div>
+          <div className="title font-bold text-[18px]">Available On</div>
+          <div className="empty w-[16px]"></div>
+        </div>
+        <Room />
+        <Room />
         <Room />
       </div>
     </div>
