@@ -74,3 +74,6 @@ i {
   align-items: center;
   justify-content: center;
 }
+.title {
+  height: fit-content;
+}

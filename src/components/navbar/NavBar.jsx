@@ -33,11 +33,6 @@ const NavBar = () => {
       title: "Clients",
       image: "bi-person",
     },
-    {
-      id: 5,
-      title: "Help Center",
-      image: "bi-question-circle",
-    },
   ];
   const navigationList = {
     dashboard: 1,
@@ -71,7 +66,7 @@ const NavBar = () => {
   }, [location]);
 
   return (
-    <div className="navbar text-white bg-[#222032] flex flex-col w-[20%] py-10 h-screen border-r-black border-solid fixed max-[920px]:flex-row max-[920px]:top-0 max-[920px]:left-0 max-[920px]:w-[100%] max-[920px]:h-fit max-[920px]:sticky max-[920px]:p-0 max-[920px]:items-center max-[920px]:justify-center max-[920px]:z-[10000] max-[720px]:p-[10px] max-[720px]:justify-between">
+    <div className="navbar space-y-10 text-white bg-[#222032] flex flex-col w-[20%] py-10 h-screen border-r-black border-solid fixed max-[920px]:space-y-0 max-[920px]:flex-row max-[920px]:top-0 max-[920px]:left-0 max-[920px]:w-[100%] max-[920px]:h-fit max-[920px]:sticky max-[920px]:p-0 max-[920px]:items-center max-[920px]:justify-center max-[920px]:z-[10000] max-[720px]:p-[10px] max-[720px]:justify-between">
       <div className="logo flex justify-center items-center gap-2 mb-10 max-[920px]:m-0 max-[920px]:mr-5 ">
         <img src={logo} alt="logo" className=" w-10" />
       </div>

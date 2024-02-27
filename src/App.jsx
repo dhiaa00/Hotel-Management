@@ -5,6 +5,7 @@ import { reservationData } from "./data";
 import { useState } from "react";
 import Booking from "./pages/Booking";
 import Rooms from "./pages/Rooms";
+import Clients from "./pages/Clients";
 
 function App() {
   const [formattedData, setFormattedData] = useState({
@@ -35,6 +36,7 @@ function App() {
         />
         <Route path="/booking" element={<Booking />} />
         <Route path="/rooms" element={<Rooms />} />
+        <Route path="/clients" element={<Clients />} />
       </Routes>
     </main>
   );

@@ -1,12 +1,12 @@
 import React from "react";
-import Room from "../components/rooms/Room";
+import Client from "../components/clients/Client";
 
-const Rooms = () => {
+const Clients = () => {
   return (
-    <div className="rooms pt-10 px-5 flex flex-1 flex-col w-[79vw] max-[920px]:w-[90%]">
-      <div className="rooms-header flex justify-between items-center py-[10px]">
+    <div className="client pt-10 px-5 flex flex-1 flex-col w-[79vw] max-[920px]:w-[90%]">
+      <div className="client-header flex justify-between items-center py-[10px]">
         <h1 className="text-[30px] pl-2 font-bold relative before:content-[''] before:absolute before:w-[3px] before:h-2/3  before:bg-mainColor before:top-[50%] before:left-[-5px] before:translate-y-[-50%]">
-          Rooms
+          Clients
         </h1>
         <div className="functionalities flex items-center gap-[10px] text-[18px] text-[#666]">
           <i className="bi bi-printer"></i>
@@ -23,30 +23,25 @@ const Rooms = () => {
           </div>
         </div>
       </div>
-      <div className="rooms-wrapper flex flex-col bg-white space-y-2 px-[10px] py-[20px]">
+      <div className="clients-wrapper flex flex-col bg-white space-y-2 px-[10px] py-[20px]">
         <div className="titles text-center flex items-center justify-between px-[20px]">
-          <div className="empty w-[14.286%]"></div>
-          <div className="title  font-bold text-[18px] text-center w-[14.286%]">
+          <div className="empty w-1/6"></div>
+          <div className="title font-bold text-[18px] text-center w-1/6">
             N°
           </div>
-          <div className="title font-bold text-[18px] text-center w-[14.286%]">
-            Type
+          <div className="title font-bold text-[18px] text-center w-1/6">
+            Name
           </div>
-          <div className="title font-bold text-[18px] w-[14.286%]">
-            In Service
-          </div>
-          <div className="title font-bold text-[18px] w-[14.286%]">Cleaned</div>
-          <div className="title font-bold text-[18px] w-[14.286%]">
-            Available On
-          </div>
-          <div className="empty w-[14.286%]"></div>
+          <div className="title font-bold text-[18px] w-1/6">Surename</div>
+          <div className="title font-bold text-[18px] w-1/6">Phone Number</div>
+          <div className="empty w-1/6"></div>
         </div>
-        <Room />
-        <Room />
-        <Room />
+        <Client />
+        <Client />
+        <Client />
       </div>
     </div>
   );
 };
 
-export default Rooms;
+export default Clients;
