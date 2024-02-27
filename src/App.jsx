@@ -4,6 +4,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import { reservationData } from "./data";
 import { useState } from "react";
 import Booking from "./pages/Booking";
+import Rooms from "./pages/Rooms";
 
 function App() {
   const [formattedData, setFormattedData] = useState({
@@ -33,6 +34,7 @@ function App() {
           element={<Dashboard reservationData={formattedData} />}
         />
         <Route path="/booking" element={<Booking />} />
+        <Route path="/rooms" element={<Rooms />} />
       </Routes>
     </main>
   );

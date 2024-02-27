@@ -27,7 +27,7 @@ const BookingForm = () => {
           <label htmlFor="idCard">ID Card</label>
           <label
             htmlFor="idCard"
-            className=" photoUpload bg-inputColor px-[50px] py-[10px] border-mainColor border-[1.5px] border-solid rounded-[5px] text-mainColor font-medium active:translate-y-[2px]">
+            className=" photoUpload flex items-center justify-center bg-inputColor px-[50px] py-[10px] border-mainColor border-[1.5px] border-solid rounded-[5px] text-mainColor font-medium active:translate-y-[2px]">
             <i className="bi bi-upload mr-[10px]"></i>Upload
           </label>
           <input
@@ -41,7 +41,7 @@ const BookingForm = () => {
           <label htmlFor="familyNote">Family Note Book</label>
           <label
             htmlFor="familyNote"
-            className=" photoUpload bg-inputColor px-[50px] py-[10px] border-mainColor border-[1.5px] border-solid rounded-[5px] text-mainColor font-medium active:translate-y-[2px]">
+            className=" photoUpload flex items-center justify-center bg-inputColor px-[50px] py-[10px] border-mainColor border-[1.5px] border-solid rounded-[5px] text-mainColor font-medium active:translate-y-[2px]">
             <i className="bi bi-upload mr-[10px]"></i>Upload
           </label>
           <input

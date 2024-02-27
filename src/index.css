@@ -40,3 +40,37 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
 }
+.navBtn {
+  display: none;
+}
+@media (min-width: 721px) {
+  .nav-links {
+    clip-path: unset !important;
+  }
+}
+@media (max-width: 720px) {
+  .nav-links {
+    background-color: #222032;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    padding: 60px 20px 0 20px;
+    transition: 0.6s;
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .navBtn {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+  }
+}
+i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
