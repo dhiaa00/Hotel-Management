@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Client = () => {
+const Client = ({ client }) => {
   const [hidden, setHidden] = useState(true);
   const handleShowMore = () => {
     setHidden(!hidden);
@@ -17,10 +17,10 @@ const Client = () => {
           id="checkRoom"
           className="w-1/6"
         />
-        <div className="number w-1/6">0001</div>
-        <div className="name w-1/6">Elaziz</div>
-        <div className="surename w-1/6">Dhia eddine</div>
-        <div className="phone-number w-1/6">0632829102</div>
+        <div className="number w-1/6">{client.number}</div>
+        <div className="name w-1/6">{client.lastName}</div>
+        <div className="surename w-1/6">{client.firstName}</div>
+        <div className="phone-number w-1/6">{client.phone}</div>
         <i
           className="bi bi-chevron-down w-1/6 cursor-pointer"
           onClick={handleShowMore}></i>
@@ -28,13 +28,13 @@ const Client = () => {
       {!hidden && (
         <div className="more-details text-center flex justify-between items-center p px-[20px] py-[10px] bg-inputColor">
           <div className="room-taken flex flex-col font-bold">
-            Room Taken: <p className="font-normal">0002</p>
+            Room Taken: <p className="font-normal">{client.room}</p>
           </div>
           <div className="from flex flex-col font-bold">
-            From: <p className="font-normal">17/10/2023</p>
+            From: <p className="font-normal">{client.fromDate}</p>
           </div>
           <div className="to flex flex-col font-bold">
-            To: <p className="font-normal">20/10/2023</p>
+            To: <p className="font-normal">{client.toDate}</p>
           </div>
           <button className=" bg-mainColor text-white flex justify-center items-center py-[5px] px-[10px]">
             Show ID

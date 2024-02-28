@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Client from "../components/clients/Client";
+import { clients } from "../clients";
 
 const Clients = () => {
+  const [searchedClient, setSearchedClient] = useState("");
+
+  const clientList = clients.filter((client) => {
+    return (
+      client.firstName.toLowerCase().includes(searchedClient.toLowerCase()) ||
+      client.lastName.toLowerCase().includes(searchedClient.toLowerCase()) ||
+      client.number.includes(searchedClient) ||
+      client.phone.includes(searchedClient)
+    );
+  });
+
   return (
     <div className="client pt-10 px-5 flex flex-1 flex-col w-[79vw] max-[920px]:w-[90%]">
       <div className="client-header flex justify-between items-center py-[10px]">
@@ -17,8 +29,10 @@ const Clients = () => {
               type="search"
               name="search"
               id="search"
-              className=" bg-[#F7F7F7] text-[18px] text-[#666] py-[5px]"
+              className=" bg-[#F7F7F7] text-[18px] text-[#666] py-[5px] px-[2px] focus:outline-none"
               placeholder="Type To Search..."
+              value={searchedClient}
+              onChange={(e) => setSearchedClient(e.target.value)}
             />
           </div>
         </div>
@@ -36,9 +50,9 @@ const Clients = () => {
           <div className="title font-bold text-[18px] w-1/6">Phone Number</div>
           <div className="empty w-1/6"></div>
         </div>
-        <Client />
-        <Client />
-        <Client />
+        {clientList.map((client) => (
+          <Client client={client} />
+        ))}
       </div>
     </div>
   );
