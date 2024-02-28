@@ -25,25 +25,42 @@ const Rooms = () => {
       </div>
       <div className="rooms-wrapper flex flex-col bg-white space-y-2 px-[10px] py-[20px]">
         <div className="titles text-center flex items-center justify-between px-[20px]">
-          <div className="empty w-[14.286%]"></div>
-          <div className="title  font-bold text-[18px] text-center w-[14.286%]">
+          <div className="empty w-[16.667%]"></div>
+          <div className="title  font-bold text-[18px] text-center w-[16.667%]">
             N°
           </div>
-          <div className="title font-bold text-[18px] text-center w-[14.286%]">
+          <div className="title font-bold text-[18px] text-center w-[16.667%]">
             Type
           </div>
-          <div className="title font-bold text-[18px] w-[14.286%]">
+          <div className="title font-bold text-[18px] w-[16.667%]">
             In Service
           </div>
-          <div className="title font-bold text-[18px] w-[14.286%]">Cleaned</div>
-          <div className="title font-bold text-[18px] w-[14.286%]">
+          <div className="title font-bold text-[18px] w-[16.667%]">Cleaned</div>
+          <div className="title font-bold text-[18px] w-[16.667%]">
             Available On
           </div>
-          <div className="empty w-[14.286%]"></div>
         </div>
-        <Room />
-        <Room />
-        <Room />
+        <Room
+          number={"0001"}
+          type={"double"}
+          inService={"Yes"}
+          cleaned={"No"}
+          availableOn={"17/10/2023"}
+        />
+        <Room
+          number={"0002"}
+          type={"single"}
+          inService={"Yes"}
+          cleaned={"No"}
+          availableOn={"20/10/2023"}
+        />
+        <Room
+          number={"0003"}
+          type={"sweat"}
+          inService={"No"}
+          cleaned={"Yes"}
+          availableOn={"//"}
+        />
       </div>
     </div>
   );

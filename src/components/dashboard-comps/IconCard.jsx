@@ -4,7 +4,7 @@ const IconCard = ({ icon, title, item1, item2, item3 }) => {
   const color = title === "Security Risks" ? "bg-[#323042]" : "bg-mainColor";
   return (
     <div
-      className={`info-card w-[24%] text-white ${color} rounded-[10px] p-5 max-[1000px]:w-[250px] `}>
+      className={`info-card w-[24%] text-white ${color} rounded-[10px] p-5 max-[1000px]:w-[250px] hover:translate-y-[-2px] transition-[0.6s] `}>
       <h2 className="flex justify-start gap-3 text-[17px] pb-5">
         <i className={`bi ${icon}`}></i>
         {title}
