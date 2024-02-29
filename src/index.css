@@ -77,3 +77,23 @@ i {
 .title {
   height: fit-content;
 }
+.booking-btn {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.booking-btn:hover {
+  background: #2196f3;
+  box-shadow:
+    0 0 10px #2196f3,
+    0 0 40px #2196f3,
+    0 0 80px #2196f3;
+}
+@media (max-width: 720px) {
+  .toBeHidden {
+    display: none;
+  }
+}

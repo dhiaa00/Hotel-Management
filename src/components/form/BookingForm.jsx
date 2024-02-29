@@ -112,7 +112,7 @@ const BookingForm = () => {
       </div>
       <button
         type="submit"
-        className="bg-gradient-to-r from-[#608AF5] to-[#1E5EFF] text-white py-[10px] w-[200px] rounded-[10px]">
+        className="booking-btn bg-gradient-to-r from-[#608AF5] to-[#1E5EFF] text-white py-[10px] w-[200px] rounded-[10px]">
         Book
       </button>
     </form>
