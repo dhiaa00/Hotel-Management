@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Client = ({ client }) => {
+const Client = ({ client, checked }) => {
   const [hidden, setHidden] = useState(true);
   const handleShowMore = () => {
     setHidden(!hidden);
@@ -11,12 +11,22 @@ const Client = ({ client }) => {
       <div
         className="client relative flex justify-between px-[20px] py-[10px] bg-inputColor rounded-[8px] border-solid border-[1px] border-[#D7D9DD] after:content[''] after:absolute after:h-2/3 after:w-[2px] after:bg-mainColor after:top-1/2 after:left-2 after:translate-y-[-50%]
       text-center">
-        <input
-          type="checkbox"
-          name="checkRoom"
-          id="checkRoom"
-          className="w-1/6 toBeHidden"
-        />
+        {checked ? (
+          <input
+            type="checkbox"
+            name="checkRoom"
+            id="checkRoom"
+            checked={true}
+            className="w-1/6 toBeHidden"
+          />
+        ) : (
+          <input
+            type="checkbox"
+            name="checkRoom"
+            id="checkRoom"
+            className="w-1/6 toBeHidden"
+          />
+        )}
         <div className="number w-1/6">{client.number}</div>
         <div className="name w-1/6">{client.lastName}</div>
         <div className="surename w-1/6 toBeHidden">{client.firstName}</div>

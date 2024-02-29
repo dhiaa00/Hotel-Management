@@ -90,3 +90,48 @@ export const clients = [
     toDate: "2022-10-07",
   },
 ];
+
+export const rooms = [
+  {
+    number: "101",
+    type: "Single",
+    inService: true,
+    cleaned: true,
+    availableOn: "2022-01-07",
+  },
+  {
+    number: "102",
+    type: "Double",
+    inService: false,
+    cleaned: true,
+    availableOn: "Available",
+  },
+  {
+    number: "103",
+    type: "Single",
+    inService: true,
+    cleaned: false,
+    availableOn: "2022-03-07",
+  },
+  {
+    number: "104",
+    type: "Single",
+    inService: false,
+    cleaned: false,
+    availableOn: "2022-01-10",
+  },
+  {
+    number: "105",
+    type: "Double",
+    inService: false,
+    cleaned: true,
+    availableOn: "Available",
+  },
+  {
+    number: "106",
+    type: "Single",
+    inService: true,
+    cleaned: false,
+    availableOn: "2022-03-07",
+  },
+];

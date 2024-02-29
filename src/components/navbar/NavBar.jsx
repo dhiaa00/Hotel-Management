@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import logo from "/images/logo.png";
 import NavBarLink from "./NavBarLink";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 const NavBar = () => {
@@ -68,7 +68,9 @@ const NavBar = () => {
   return (
     <div className="navbar space-y-10 text-white bg-[#222032] flex flex-col w-[20%] py-10 h-screen border-r-black border-solid fixed max-[920px]:space-y-0 max-[920px]:flex-row max-[920px]:top-0 max-[920px]:left-0 max-[920px]:w-[100%] max-[920px]:h-fit max-[920px]:sticky max-[920px]:p-0 max-[920px]:items-center max-[920px]:justify-center max-[920px]:z-[10000] max-[720px]:p-[10px] max-[720px]:justify-between">
       <div className="logo flex justify-center items-center gap-2 mb-10 max-[920px]:m-0 max-[920px]:mr-5 ">
-        <img src={logo} alt="logo" className=" w-10" />
+        <Link to="/dashboard">
+          <img src={logo} alt="logo" className=" w-10" />
+        </Link>
       </div>
       <nav className="nav-links" style={navStyles}>
         <ul className="flex flex-col max-[920px]:flex-row mx-5 gap-3 max-[920px]:m-0 max-[920px]:p-2">

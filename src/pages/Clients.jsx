@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import Client from "../components/clients/Client";
-import { clients } from "../clients";
+import { clients } from "../client-&-rooms";
 
 const Clients = () => {
+  const [clientsChecked, setClientsChecked] = useState(false);
   const [searchedClient, setSearchedClient] = useState("");
 
   const clientList = clients.filter((client) => {
     return (
       client.firstName.toLowerCase().includes(searchedClient.toLowerCase()) ||
       client.lastName.toLowerCase().includes(searchedClient.toLowerCase()) ||
-      client.number.includes(searchedClient) ||
-      client.phone.includes(searchedClient)
+      client.number.includes(searchedClient)
     );
   });
 
@@ -27,6 +27,7 @@ const Clients = () => {
             name="checkAll"
             id="checkAll"
             className="toBeHidden"
+            onChange={() => setClientsChecked(!clientsChecked)}
           />
           <div className="search flex items-center px-[5px] justify-center gap-[5px] bg-[#F7F7F7] border-[#0F0D83]/[0.1] border-[0.8px] border-solid rounded-[8px]">
             <i className="bi bi-search text-[20px] flex items-center"></i>
@@ -60,7 +61,11 @@ const Clients = () => {
           <div className="empty w-1/6"></div>
         </div>
         {clientList.map((client) => (
-          <Client client={client} />
+          <Client
+            key={client.number}
+            client={client}
+            checked={clientsChecked}
+          />
         ))}
       </div>
     </div>
