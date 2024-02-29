@@ -15,18 +15,18 @@ const Client = ({ client }) => {
           type="checkbox"
           name="checkRoom"
           id="checkRoom"
-          className="w-1/6"
+          className="w-1/6 toBeHidden"
         />
         <div className="number w-1/6">{client.number}</div>
         <div className="name w-1/6">{client.lastName}</div>
-        <div className="surename w-1/6">{client.firstName}</div>
-        <div className="phone-number w-1/6">{client.phone}</div>
+        <div className="surename w-1/6 toBeHidden">{client.firstName}</div>
+        <div className="phone-number w-1/6 toBeHidden">{client.phone}</div>
         <i
           className="bi bi-chevron-down w-1/6 cursor-pointer"
           onClick={handleShowMore}></i>
       </div>
       {!hidden && (
-        <div className="more-details text-center flex justify-between items-center p px-[20px] py-[10px] bg-inputColor">
+        <div className="more-details text-center flex justify-between items-center p px-[20px] py-[10px] bg-inputColor max-[720px]:text-[15px]">
           <div className="room-taken flex flex-col font-bold">
             Room Taken: <p className="font-normal">{client.room}</p>
           </div>

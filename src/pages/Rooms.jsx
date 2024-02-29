@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Room from "../components/rooms/Room";
 
 const Rooms = () => {
+  const [searchedRoom, setSearchedRoom] = useState("");
   return (
     <div className="rooms pt-10 px-5 flex flex-1 flex-col w-[79vw] max-[920px]:w-[90%]">
       <div className="rooms-header flex justify-between items-center py-[10px] max-[720px]:space-x-2">
@@ -24,6 +25,8 @@ const Rooms = () => {
               id="search"
               className=" bg-[#F7F7F7] text-[18px] text-[#666] py-[5px] max-[720px]:w-[100%]"
               placeholder="Type To Search..."
+              value={searchedRoom}
+              onChange={(e) => setSearchedRoom(e.target.value)}
             />
           </div>
         </div>
