@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "./Rating";
 
 const Review = ({ userName, rating }) => {
   return (
@@ -6,7 +7,7 @@ const Review = ({ userName, rating }) => {
       <div className="preson flex gap-[5px] ">
         <i className="bi bi-person"></i>
         <div className="username font-bold">{userName}</div>
-        {rating} stars
+        <Rating rating={rating} />
       </div>
       <div className="feedback">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.

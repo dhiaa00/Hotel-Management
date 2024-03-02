@@ -1,55 +1,93 @@
-import { doc } from "prettier";
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 const BookingForm = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const [file1Uploaded, setFile1Uploaded] = useState(false);
+  const [file2Uploaded, setFile2Uploaded] = useState(false);
   const date = new Date();
   const [currentDate, setCurrentDate] = useState(
     date.toISOString().split("T")[0]
   );
+
+  const onSubmit = (data) => {
+    alert("Booked succesfully");
+    reset();
+  };
+
   return (
     <form
+      onSubmit={handleSubmit(onSubmit)}
       action=""
       className="flex flex-col justify-center items-center rounded-[10px] py-10 px-5 bg-white">
       <div className="inputs flex flex-wrap justify-center items-center gap-5">
         <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start">
           <label htmlFor="firstName">First Name</label>
-          <input id="firstName" type="text" placeholder="Enter First Name" />
+          <input
+            {...register("first name")}
+            id="firstName"
+            type="text"
+            placeholder="Enter First Name"
+          />
         </div>
         <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start">
           <label htmlFor="lastName">Last Name</label>
-          <input id="lastName" type="text" placeholder="Enter Last Name" />
+          <input
+            {...register("last name")}
+            id="lastName"
+            type="text"
+            placeholder="Enter Last Name"
+          />
         </div>
         <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start">
           <label htmlFor="phone">Phone Number</label>
-          <input id="phone" type="tel" placeholder="Enter Phone Number" />
+          <input
+            {...register("phone number")}
+            id="phone"
+            type="tel"
+            placeholder="Enter Phone Number"
+          />
         </div>
-        <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start">
+        <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start relative">
           <label htmlFor="idCard">ID Card</label>
           <label
             htmlFor="idCard"
-            className=" photoUpload flex items-center justify-center bg-inputColor px-[50px] py-[10px] border-mainColor border-[1.5px] border-solid rounded-[5px] text-mainColor font-medium active:translate-y-[2px]">
+            className=" photoUpload flex items-center justify-center bg-inputColor px-[50px] py-[10px] border-mainColor border-[1.5px] border-solid rounded-[5px] text-mainColor font-medium active:translate-y-[2px] ">
             <i className="bi bi-upload mr-[10px]"></i>Upload
           </label>
           <input
             id="idCard"
             type="file"
-            className=""
+            onChange={() => setFile1Uploaded(!file1Uploaded)}
             style={{ display: "none" }}
           />
+          {file1Uploaded && (
+            <p className="flex gap-1 absolute content-[''] bottom-[-25px] left-0 text-[#999] text-[15px]">
+              <i className="bi bi-check text-[#1DDB82] "></i>file uploaded
+              succesfully
+            </p>
+          )}
         </div>
-        <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start">
+        <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start relative">
           <label htmlFor="familyNote">Family Note Book</label>
           <label
             htmlFor="familyNote"
-            className=" photoUpload flex items-center justify-center bg-inputColor px-[50px] py-[10px] border-mainColor border-[1.5px] border-solid rounded-[5px] text-mainColor font-medium active:translate-y-[2px]">
+            className=" photoUpload flex items-center justify-center bg-inputColor px-[50px] py-[10px] border-mainColor border-[1.5px] border-solid rounded-[5px] text-mainColor font-medium active:translate-y-[2px] ">
             <i className="bi bi-upload mr-[10px]"></i>Upload
           </label>
           <input
             id="familyNote"
             type="file"
             className=""
+            onChange={() => setFile2Uploaded(!file2Uploaded)}
             style={{ display: "none" }}
           />
+          {file2Uploaded && (
+            <p className="flex gap-1 absolute content-[''] bottom-[-25px] left-0 text-[#999] text-[15px]">
+              <i className="bi bi-check text-[#1DDB82]"></i>file uploaded
+              succesfully
+            </p>
+          )}
         </div>
         <div className="booking-input w-[200px] flex flex-col gap-[10px] justify-center items-start">
           <label htmlFor="roomType"> Room Type</label>

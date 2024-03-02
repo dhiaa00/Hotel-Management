@@ -62,8 +62,8 @@ const Dashboard = ({ reservationData }) => {
           </h2>
           <div className="reviews-list flex flex-col gap-[5px]">
             <Review userName={"Karim Djaber"} rating={4} />
-            <Review userName={"Karim Djaber"} rating={4} />
-            <Review userName={"Karim Djaber"} rating={4} />
+            <Review userName={"Elon Musk"} rating={4.5} />
+            <Review userName={"Si Moh"} rating={3} />
           </div>
         </div>
         <div className="stats flex flex-col bg-white w-[48%] max-[1000px]:w-full p-5 rounded-[10px] ">
