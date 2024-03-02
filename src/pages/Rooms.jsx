@@ -34,7 +34,7 @@ const Rooms = () => {
               type="search"
               name="search"
               id="search"
-              className=" bg-[#F7F7F7] text-[18px] text-[#666] py-[5px] max-[720px]:w-[100%]"
+              className=" bg-[#F7F7F7] text-[18px] text-[#666] py-[5px] max-[720px]:w-[100%] focus:outline-none"
               placeholder="Type To Search..."
               value={searchedRoom}
               onChange={(e) => setSearchedRoom(e.target.value)}
