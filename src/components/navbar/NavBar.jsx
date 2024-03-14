@@ -1,17 +1,37 @@
-import React, { useRef, useState } from "react";
+import { useRef, useEffect } from "react";
+import { useState } from "react";
 import logo from "/images/logo.png";
 import NavBarLink from "./NavBarLink";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
 const NavBar = () => {
+  // NavBar.jsx
   const [linkNumber, setLinkNumber] = useState(1);
   const [toggle, setToggle] = useState(false);
   const listIcon = useRef();
-  const navStyles = toggle
-    ? { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }
-    : { clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)" };
 
+  // close the navbar for mobiles when click outside it
+  const navRef = useRef(null);
+
+  // Pass the `toggle` state to the `useOutsideClick` hook
+  const navOutsideClick = useOutsideClick(navRef, toggle);
+
+  useEffect(() => {
+    if (navOutsideClick && toggle) {
+      setToggle(false);
+      navOutsideClick.reset(); // Reset the navOutsideClick state
+    }
+  }, [navOutsideClick]);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
+  const navStyles =
+    toggle && !navOutsideClick
+      ? { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }
+      : { clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)" };
   const navList = [
     {
       id: 1,
@@ -57,9 +77,6 @@ const NavBar = () => {
     }
   }, [currentPage]);
 
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
   const location = useLocation();
   useEffect(() => {
     setToggle(false);
@@ -72,7 +89,7 @@ const NavBar = () => {
           <img src={logo} alt="logo" className=" w-10" />
         </Link>
       </div>
-      <nav className="nav-links" style={navStyles}>
+      <nav className="nav-links" style={navStyles} ref={navRef}>
         <ul className="flex flex-col max-[920px]:flex-row mx-5 gap-3 max-[920px]:m-0 max-[920px]:p-2">
           {navList.map((e) => (
             <NavBarLink

@@ -11,7 +11,6 @@ const Rating = ({ rating }) => {
       stars.push(<i className="bi bi-star text-[#FF8322]"></i>);
     }
   }
-  console.log(stars);
 
   return (
     <div className="rating flex space-x-1 items-center justify-center">
