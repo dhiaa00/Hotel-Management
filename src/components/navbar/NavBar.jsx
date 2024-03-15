@@ -20,7 +20,6 @@ const NavBar = () => {
   useEffect(() => {
     if (navOutsideClick && toggle) {
       setToggle(false);
-      navOutsideClick.reset(); // Reset the navOutsideClick state
     }
   }, [navOutsideClick]);
 
