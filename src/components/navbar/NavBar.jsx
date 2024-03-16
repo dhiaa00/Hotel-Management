@@ -15,7 +15,7 @@ const NavBar = () => {
   const navRef = useRef(null);
 
   // Pass the `toggle` state to the `useOutsideClick` hook
-  const navOutsideClick = useOutsideClick(navRef, toggle);
+  const navOutsideClick = useOutsideClick(navRef, toggle, listIcon);
 
   useEffect(() => {
     if (navOutsideClick && toggle) {
